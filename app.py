@@ -26,4 +26,5 @@ def create_app(test_config=None):
 app = create_app()
 
 if __name__ == '__main__':
-    app.run()
+    with app.app_context():
+        app.run()
